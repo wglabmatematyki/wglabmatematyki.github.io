@@ -10,10 +10,11 @@
 
   <style>
     :root {
-      --main-bg: linear-gradient(to right, #2e2e2e, #4f4f4f);
-      --card-bg: rgba(255, 255, 255, 0.05);
-      --text-light: #f1f1f1;
-      --accent: #f39c12;
+      --gray-bg: #f0f0f3;
+      --gray-text: #333;
+      --card-bg: #ffffff;
+      --accent: #4a90e2; /* błękit królewski */
+      --hover-accent: #2c74c4;
     }
 
     * {
@@ -24,8 +25,8 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background: var(--main-bg);
-      color: var(--text-light);
+      background: var(--gray-bg);
+      color: var(--gray-text);
       display: flex;
       flex-direction: column;
       min-height: 100vh;
@@ -38,22 +39,23 @@
 
     header h1 {
       font-size: 3rem;
-      color: #fff;
+      color: var(--gray-text);
       margin-bottom: 10px;
     }
 
     header p {
       font-size: 1.2rem;
-      color: #ccc;
+      color: #666;
       font-weight: 300;
     }
 
     nav {
       display: flex;
       justify-content: center;
-      background-color: rgba(255, 255, 255, 0.05);
+      background-color: #e6e6e6;
       padding: 12px 0;
       gap: 30px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
 
     nav a {
@@ -64,7 +66,7 @@
     }
 
     nav a:hover {
-      color: #fff;
+      color: var(--hover-accent);
     }
 
     .container {
@@ -79,31 +81,28 @@
       background-color: var(--card-bg);
       padding: 25px;
       border-radius: 12px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.05);
       transition: transform 0.3s ease;
-      backdrop-filter: blur(5px);
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-4px);
     }
 
     .card h2 {
       color: var(--accent);
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
-    .card ul {
-      padding-left: 20px;
-      list-style: disc;
-      color: #ddd;
+    .card p {
+      color: #444;
     }
 
     footer {
       text-align: center;
       padding: 30px 20px;
-      background-color: rgba(255, 255, 255, 0.05);
-      color: #aaa;
+      background-color: #e6e6e6;
+      color: #777;
       font-size: 0.9rem;
       margin-top: auto;
     }
@@ -140,22 +139,12 @@
   <div class="container">
     <div class="card">
       <h2>O kursie</h2>
-      <p>Ten kurs to zaproszenie do świata matematyki, którego nie poznasz w szkole średniej. Odkryjesz idee, które leżą u podstaw analizy, algebry abstrakcyjnej, logiki i teorii mnogości. Kurs prowadzony jest przez profesora matematyki i skierowany do ciekawych świata uczniów.</p>
-    </div>
-
-    <div class="card">
-      <h2>Co zyskasz?</h2>
-      <ul>
-        <li>Wprowadzenie do pojęć matematyki wyższej</li>
-        <li>Piękno dowodów i logicznego myślenia</li>
-        <li>Dostęp do materiałów PDF i zadań z rozwiązaniami</li>
-        <li>Możliwość zadawania pytań prowadzącemu</li>
-      </ul>
+      <p>„Matematyka Nieskończona” to darmowy kurs online dla uczniów szkół średnich, prowadzony przez profesora matematyki. Wychodzimy poza szkolny program, wprowadzając uczestników w pojęcia, które leżą u podstaw nowoczesnej matematyki: analiza, zbiory, nieskończoność, dowody, logika formalna i algebra abstrakcyjna.</p>
     </div>
 
     <div class="card">
       <h2>Dla kogo?</h2>
-      <p>Dla uczniów szkół średnich (liceum, technikum), którzy czują, że matematyka to coś więcej niż liczby. Jeśli chcesz zrozumieć „dlaczego” – jesteś w dobrym miejscu.</p>
+      <p>Kurs jest przeznaczony dla uczniów liceum lub technikum, którzy czują niedosyt i chcą zobaczyć, czym naprawdę jest matematyka. Jeśli interesuje Cię, skąd biorą się wzory, jak działa nieskończoność, i czym różni się matematyka szkolna od akademickiej – ten kurs jest dla Ciebie.</p>
     </div>
   </div>
 
