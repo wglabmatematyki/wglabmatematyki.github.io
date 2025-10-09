@@ -11,8 +11,8 @@
     :root {
       --gray-dark-start: #2e353d;
       --gray-dark-end: #39414a;
-      --teal-start: #2a7f7f;
-      --teal-end: #4aa5a5;
+      --accent-start: #6a4c93; /* ciemny ametyst */
+      --accent-end: #8e6bb8;   /* jasny ametyst */
       --text-light: #e0e7f3;
       --text-muted: #a0aab9;
     }
@@ -30,7 +30,7 @@
     header {
       max-height: 120px;
       padding: 20px 40px;
-      background: linear-gradient(90deg, var(--gray-dark-start), var(--teal-start));
+      background: linear-gradient(90deg, var(--gray-dark-start), var(--accent-start));
       display: flex;
       align-items: center;
       border-bottom-left-radius: 15px;
@@ -57,7 +57,7 @@
     }
 
     nav a {
-      color: var(--teal-start);
+      color: var(--accent-start);
       font-weight: 600;
       font-size: 1.05rem;
       text-decoration: none;
@@ -68,7 +68,7 @@
 
     nav a:hover,
     nav a:focus {
-      background-color: var(--teal-end);
+      background-color: var(--accent-end);
       color: var(--text-light);
       outline: none;
     }
@@ -99,7 +99,7 @@
       margin-top: 0;
       font-weight: 600;
       font-size: 1.6rem;
-      background: linear-gradient(90deg, var(--teal-start), var(--teal-end));
+      background: linear-gradient(90deg, var(--accent-start), var(--accent-end));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       user-select: none;
@@ -114,7 +114,7 @@
     footer {
       text-align: center;
       padding: 22px 20px;
-      background: linear-gradient(90deg, var(--teal-end), var(--teal-start));
+      background: linear-gradient(90deg, var(--accent-end), var(--accent-start));
       color: var(--text-light);
       font-size: 0.9rem;
       box-shadow: 0 -3px 8px rgba(0,0,0,0.5);
