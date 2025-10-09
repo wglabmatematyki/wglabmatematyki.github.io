@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Matematyka Nieskończona</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
   <style>
-    /* Reset */
+    /* Reset + Podstawy */
     * {
       margin: 0;
       padding: 0;
@@ -13,22 +17,22 @@
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f6f6f6 url('img/background.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #333;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #2c3e50, #3498db);
+      color: #fff;
       line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     header {
-      background-color: rgba(0, 0, 0, 0.7);
-      color: white;
-      padding: 40px 20px;
       text-align: center;
+      padding: 80px 20px 40px;
     }
 
     header h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin-bottom: 10px;
     }
 
@@ -38,69 +42,84 @@
     }
 
     nav {
-      background-color: #222;
       display: flex;
       justify-content: center;
+      background-color: rgba(255, 255, 255, 0.1);
       padding: 10px 0;
+      margin-bottom: 30px;
     }
 
     nav a {
-      color: white;
+      color: #fff;
       text-decoration: none;
       margin: 0 20px;
-      font-weight: bold;
+      font-weight: 500;
       transition: color 0.3s;
     }
 
     nav a:hover {
-      color: #00bcd4;
+      color: #f1c40f;
     }
 
     .container {
       max-width: 960px;
-      margin: 40px auto;
+      margin: 0 auto;
       padding: 20px;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: grid;
+      gap: 30px;
     }
 
-    section {
-      margin-bottom: 40px;
+    .card {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
     }
 
-    h2 {
-      color: #005b99;
-      margin-bottom: 15px;
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      color: #f1c40f;
+      margin-bottom: 10px;
+    }
+
+    .card ul {
+      padding-left: 20px;
+      list-style: disc;
     }
 
     footer {
+      margin-top: auto;
       text-align: center;
-      padding: 20px;
-      background-color: #222;
-      color: white;
-      margin-top: 40px;
+      padding: 30px 20px;
+      background-color: rgba(0, 0, 0, 0.2);
+      font-size: 0.9rem;
     }
 
     @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-      }
-
-      nav a {
-        margin: 10px 0;
-      }
-
       header h1 {
         font-size: 2rem;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .container {
+        padding: 10px;
       }
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Matematyka Nieskończona</h1>
-    <p>Kurs dla ambitnych uczniów szkół średnich – odkryj piękno matematyki wyższej</p>
+    <p>Wprowadzenie do matematyki wyższej dla uczniów szkół średnich</p>
   </header>
 
   <nav>
@@ -110,29 +129,30 @@
   </nav>
 
   <div class="container">
-    <section>
+    <div class="card">
       <h2>O kursie</h2>
-      <p>„Matematyka Nieskończona” to darmowy kurs online prowadzony przez profesora matematyki, stworzony z myślą o uczniach szkół średnich, którzy chcą wyjść poza standardowy program nauczania. To Twoja szansa na poznanie pojęć, których nie znajdziesz w podręcznikach – takich jak nieskończoność, dowody formalne, teoria mnogości, przestrzenie wektorowe i więcej.</p>
-    </section>
+      <p>Ten kurs to zaproszenie do świata matematyki, którego nie poznasz w szkole średniej. Odkryjesz idee, które leżą u podstaw analizy, algebry abstrakcyjnej, logiki i teorii mnogości. Kurs prowadzony jest przez profesora matematyki i skierowany do ciekawych świata uczniów.</p>
+    </div>
 
-    <section>
+    <div class="card">
       <h2>Co zyskasz?</h2>
       <ul>
-        <li>Wstęp do pojęć matematyki wyższej</li>
-        <li>Praktyczne ćwiczenia i zadania z rozwiązaniami</li>
-        <li>Dostęp do notatek z wykładów</li>
-        <li>Kontakt z prowadzącym i innymi uczestnikami</li>
+        <li>Wprowadzenie do pojęć matematyki wyższej</li>
+        <li>Piękno dowodów i logicznego myślenia</li>
+        <li>Dostęp do materiałów PDF i zadań z rozwiązaniami</li>
+        <li>Możliwość zadawania pytań prowadzącemu</li>
       </ul>
-    </section>
+    </div>
 
-    <section>
+    <div class="card">
       <h2>Dla kogo?</h2>
-      <p>Dla uczniów szkół średnich (głównie liceum), którzy chcą wyjść poza podstawę programową i spróbować „prawdziwej” matematyki. Niezależnie od poziomu – liczy się ciekawość i chęć myślenia!</p>
-    </section>
+      <p>Dla uczniów szkół średnich (liceum, technikum), którzy czują, że matematyka to coś więcej niż liczby. Jeśli chcesz zrozumieć „dlaczego” – jesteś w dobrym miejscu.</p>
+    </div>
   </div>
 
   <footer>
-    <p>&copy; 2025 Matematyka Nieskończona | Prowadzenie: prof. Jan Kowalski</p>
+    &copy; 2025 Matematyka Nieskończona • Projekt edukacyjny dla młodych umysłów
   </footer>
+
 </body>
 </html>
