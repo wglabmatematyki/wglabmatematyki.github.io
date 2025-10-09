@@ -1,148 +1,145 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Matematyka Nieskończona</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Matematyka Nieskończona</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
 
-  <style>
-    :root {
-      --gray-dark-start: #2e353d;
-      --gray-dark-end: #39414a;
-      --accent-start: #6a4c93; /* ciemny ametyst */
-      --accent-end: #8e6bb8;   /* jasny ametyst */
-      --text-light: #e0e7f3;
-      --text-muted: #a0aab9;
-    }
+<style>
+  :root {
+    --color-gray-dark-start: #2e353d;
+    --color-gray-dark-end: #39414a;
+    --color-accent-start: #3ac7a4;
+    --color-accent-end: #60d394;
+    --color-text-light: #e0e7f3;
+    --color-text-muted: #a0aab9;
+  }
 
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, var(--gray-dark-start), var(--gray-dark-end));
-      color: var(--text-light);
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--color-gray-dark-start), var(--color-gray-dark-end));
+    color: var(--color-text-light);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 
+  header {
+    max-height: 120px;
+    padding: 20px 40px;
+    background: linear-gradient(90deg, var(--color-gray-dark-start), var(--color-accent-start));
+    display: flex;
+    align-items: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--color-text-light);
+    letter-spacing: 1.1px;
+    user-select: none;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    background: transparent;
+    padding: 15px 0;
+    gap: 40px;
+    border-bottom: 1px solid #4f5a68;
+  }
+
+  nav a {
+    color: var(--color-accent-start);
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  nav a:hover,
+  nav a:focus {
+    background-color: var(--color-accent-end);
+    color: var(--color-text-light);
+    outline: none;
+  }
+
+  main.container {
+    max-width: 860px;
+    margin: 40px auto 60px;
+    padding: 0 20px;
+    display: grid;
+    gap: 32px;
+    flex-grow: 1;
+  }
+
+  section.card {
+    background: linear-gradient(145deg, #39414a, #2e353d);
+    border-radius: 12px;
+    padding: 28px 32px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  section.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.85);
+  }
+
+  section.card h2 {
+    margin-top: 0;
+    font-weight: 600;
+    font-size: 1.6rem;
+    background: linear-gradient(90deg, var(--color-accent-start), var(--color-accent-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    user-select: none;
+  }
+
+  section.card p {
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    font-weight: 400;
+  }
+
+  footer {
+    text-align: center;
+    padding: 22px 20px;
+    background: linear-gradient(90deg, var(--color-accent-end), var(--color-accent-start));
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+    box-shadow: 0 -3px 8px rgba(0,0,0,0.5);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    user-select: none;
+  }
+
+  @media (max-width: 720px) {
     header {
-      max-height: 120px;
-      padding: 20px 40px;
-      background: linear-gradient(90deg, var(--gray-dark-start), var(--accent-start));
-      display: flex;
-      align-items: center;
-      border-bottom-left-radius: 15px;
-      border-bottom-right-radius: 15px;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
-    }
-
-    header h1 {
-      margin: 0;
-      font-weight: 700;
-      font-size: 1.8rem;
-      color: var(--text-light);
-      letter-spacing: 1.1px;
-      user-select: none;
-    }
-
-    nav {
-      display: flex;
       justify-content: center;
-      background: transparent;
-      padding: 15px 0;
-      gap: 40px;
-      border-bottom: 1px solid #4f5a68;
+      padding: 20px 20px;
     }
-
-    nav a {
-      color: var(--accent-start);
-      font-weight: 600;
-      font-size: 1.05rem;
-      text-decoration: none;
-      padding: 5px 10px;
-      border-radius: 5px;
-      transition: background-color 0.25s ease, color 0.25s ease;
+    nav {
+      gap: 20px;
+      padding: 12px 0;
     }
-
-    nav a:hover,
-    nav a:focus {
-      background-color: var(--accent-end);
-      color: var(--text-light);
-      outline: none;
-    }
-
     main.container {
-      max-width: 860px;
-      margin: 40px auto 60px;
-      padding: 0 20px;
-      display: grid;
-      gap: 32px;
-      flex-grow: 1;
+      margin: 30px auto 50px;
     }
-
-    section.card {
-      background: linear-gradient(145deg, #39414a, #2e353d);
-      border-radius: 12px;
-      padding: 28px 32px;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    section.card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.85);
-    }
-
     section.card h2 {
-      margin-top: 0;
-      font-weight: 600;
-      font-size: 1.6rem;
-      background: linear-gradient(90deg, var(--accent-start), var(--accent-end));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      user-select: none;
+      font-size: 1.4rem;
     }
-
-    section.card p {
-      color: var(--text-muted);
-      line-height: 1.6;
-      font-weight: 400;
-    }
-
-    footer {
-      text-align: center;
-      padding: 22px 20px;
-      background: linear-gradient(90deg, var(--accent-end), var(--accent-start));
-      color: var(--text-light);
-      font-size: 0.9rem;
-      box-shadow: 0 -3px 8px rgba(0,0,0,0.5);
-      border-top-left-radius: 12px;
-      border-top-right-radius: 12px;
-      user-select: none;
-    }
-
-    @media (max-width: 720px) {
-      header {
-        justify-content: center;
-        padding: 20px;
-      }
-
-      nav {
-        gap: 20px;
-        padding: 12px 0;
-      }
-
-      main.container {
-        margin: 30px auto 50px;
-      }
-
-      section.card h2 {
-        font-size: 1.4rem;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
 
