@@ -35,3 +35,104 @@
     header p {
       font-size: 1.2rem;
       font-weight: 300;
+    }
+
+    nav {
+      background-color: #222;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: #005b99;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+      color: white;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 10px 0;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Matematyka Nieskończona</h1>
+    <p>Kurs dla ambitnych uczniów szkół średnich – odkryj piękno matematyki wyższej</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Strona główna</a>
+    <a href="notatki.html">Notatki</a>
+    <a href="zadania.html">Zadania domowe</a>
+  </nav>
+
+  <div class="container">
+    <section>
+      <h2>O kursie</h2>
+      <p>„Matematyka Nieskończona” to darmowy kurs online prowadzony przez profesora matematyki, stworzony z myślą o uczniach szkół średnich, którzy chcą wyjść poza standardowy program nauczania. To Twoja szansa na poznanie pojęć, których nie znajdziesz w podręcznikach – takich jak nieskończoność, dowody formalne, teoria mnogości, przestrzenie wektorowe i więcej.</p>
+    </section>
+
+    <section>
+      <h2>Co zyskasz?</h2>
+      <ul>
+        <li>Wstęp do pojęć matematyki wyższej</li>
+        <li>Praktyczne ćwiczenia i zadania z rozwiązaniami</li>
+        <li>Dostęp do notatek z wykładów</li>
+        <li>Kontakt z prowadzącym i innymi uczestnikami</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Dla kogo?</h2>
+      <p>Dla uczniów szkół średnich (głównie liceum), którzy chcą wyjść poza podstawę programową i spróbować „prawdziwej” matematyki. Niezależnie od poziomu – liczy się ciekawość i chęć myślenia!</p>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Matematyka Nieskończona | Prowadzenie: prof. Jan Kowalski</p>
+  </footer>
+</body>
+</html>
